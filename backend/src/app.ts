@@ -4,11 +4,10 @@ import dotenv from 'dotenv';
 import connectDB from './config/db';
 import projectRoutes from './routes/projectRoutes';
 import userRoutes from './routes/userRoutes';
-import wikiRoutes from './routes/wikiRoutes';
+import fileRoutes from './routes/fileRoutes'; // ファイルルートを追加
 
 // 環境変数を読み込み
 dotenv.config({ path: '../.env' });
-console.log('MONGODB_URI from dotenv:', process.env.MONGODB_URI); // デバッグ用
 
 const app = express();
 
@@ -19,6 +18,6 @@ connectDB();
 
 app.use('/projects', projectRoutes);
 app.use('/users', userRoutes);
-app.use('/wiki', wikiRoutes); // Wikiルートを追加
+app.use('/files', fileRoutes); // ファイルルートを追加
 
 export default app;

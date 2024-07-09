@@ -19,6 +19,8 @@ const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
         yield mongoose_1.default.connect(process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
+            useCreateIndex: true,
+            useFindAndModify: false, // 追加
         });
         console.log('MongoDB connected');
     }
