@@ -64,10 +64,4 @@
 - Node.jsとnpmがインストールされていること
 - MongoDBがインストールされ、稼働していること
 
-### 手順
 
-1. リポジトリをクローン
-
-   ```bash
-   git clone https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPOSITORY_NAME>.git
-   cd <YOUR_REPOSITORY_NAME>
